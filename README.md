@@ -1,38 +1,84 @@
-# Zorvyn Finance Dashboard — Frontend Assessment
+# Zorvyn Finance Dashboard — Frontend Assessment 💎
 
-Hey! This is my submission for the Frontend Developer Intern role at Zorvyn. I wanted to build something that wasn't just "functional" but actually felt like a premium product you'd want to use to track your money.
-
-## 💡 What's inside?
-
-I focused on making the dashboard clean, fast, and interactive. Here's a quick look at what I've implemented:
-
-*   **Charts that actually help**: Used Recharts for a Balance Trend area chart and a Category Breakdown pie chart. They’re animated and responsive, so they look great on any screen.
-*   **Transactions with all the bells & whistles**: You can search through your history, filter by category or type (income vs. expense), and sort them however you like.
-*   **Admin vs. Viewer Modes**: I simulated a simple role-based UI. If you're an "Admin," you can add, edit, and delete transactions. If you're a "Viewer," you get a read-only experience. You can swap between them at the bottom of the sidebar.
-*   **Dark Mode & Persistence**: I spent extra time making sure the theme switcher feels premium. Plus, I’ve hooked everything up to Local Storage, so your transactions and settings aren't gone the moment you hit refresh.
-*   **CSV Export**: Added a quick way to download your data for those who like to keep their own spreadsheets.
-
-## 🛠️ The Tech Used
-
-I kept it modern and lightweight:
-*   **React (Vite)**: For the core structure.
-*   **Tailwind CSS**: For all the styling (I love how fast it is for building custom layouts).
-*   **Framer Motion**: Used this for the smooth page transitions and micro-animations. It just makes the app feel "alive."
-*   **Lucide React**: For those clean, consistent icons.
-
-## 🚀 How to get it running
-
-1.  Pop open your terminal and run `npm install` to grab the dependencies.
-2.  Fire up the dev server with `npm run dev`.
-3.  Open the link in your browser and you're good to go!
-
-## 🧠 A bit about my approach
-
-*   **UX First**: I moved the role switcher to the bottom with a "Profile" look because it felt more intuitive for a dashboard.
-*   **Clean Code**: I used the React Context API to manage the global state (theme, roles, transactions) so the code stays organized and easy to read.
-*   **Performance**: I made sure all the filtering and chart calculations happen efficiently so the app stays snappy even if you add a lot of data.
-
-Thanks for checking out my work! I really enjoyed putting this together.
+A premium, responsive financial management portal built for the **Frontend Developer Intern** role at Zorvyn. This project demonstrates modern UI/UX principles, state management with React Context, and high-performance data visualizations.
 
 ---
-**Built with ❤️ by S Venu**
+
+## 🚀 Getting Started (Setup Instructions)
+
+To get the dashboard running on your local machine, follow these simple steps:
+
+### Prerequisites
+- **Node.js** (v18 or higher recommended)
+- **npm** (comes with Node.js)
+
+### Installation
+1.  **Clone the Repository**:
+    ```bash
+    git clone https://github.com/venu1011/zorvyn-finance-dashboard.git
+    cd zorvyn-finance-dashboard
+    ```
+2.  **Install Dependencies**:
+    ```bash
+    npm install
+    ```
+3.  **Launch the Dashboard**:
+    ```bash
+    npm run dev
+    ```
+4.  **View in Browser**: Open [http://localhost:5173](http://localhost:5173) to see the dashboard in action!
+
+---
+
+## 💡 Overview of Approach
+
+My primary goal was to build a dashboard that feels **alive** and **premium**. I focused on three key pillars:
+
+### 1. Robust State Management
+I utilized the **React Context API** to create a centralized `DashboardContext`. This ensures that data (transactions, totals), user roles, and UI themes (Dark/Light) are globally accessible. This approach eliminates prop-drilling and ensures the interface stays in perfect sync across all sections (Dashboard, Transactions, and Insights).
+
+### 2. High-Fidelity UX & Animations
+To make the dashboard feel like a high-end product, I integrated **Framer Motion**. I used it for:
+-   **Page Transitions**: Smooth fades and slides between tabs.
+-   **Staggered Entrance**: Dashboard cards and list items entry animations.
+-   **Touch Feedback**: Explicit visual indicators when tapping on charts in mobile view.
+
+### 3. Component-Driven Architecture
+The codebase is structured into clear, modular components (`Sidebar`, `Overview`, `TransactionsList`, `TransactionModal`). This makes the code highly maintainable and easy to extend with new features.
+
+---
+
+## 🔥 Features & Implementation
+
+### 🛡️ Role-Based UI (RBAC)
+I implemented a functional Role Switcher at the bottom of the sidebar. 
+-   **Admin**: Can add, edit, and delete transactions.
+-   **Viewer**: Read-only access with clear "Access Level" notifications.
+-   **Real-time UX**: Switching roles triggers a toast notification to give immediate feedback to the user.
+
+### 📊 Interactive Data Visualizations
+Using **Recharts**, I built:
+-   **Balance Trend**: A custom Area Chart visualizing cumulative wealth over time.
+-   **Spending Breakdown**: A Donut Chart with a dedicated legend for category analysis.
+-   *Note*: Both charts are optimized for mobile, featuring snappy tooltips and focus-rect removal for a cleaner touch experience.
+
+### 💾 Data Persistence
+The dashboard integrates **LocalStorage**. All your added transactions, chosen theme (Dark/Light), and current user role are automatically saved. Even after a hard refresh, the dashboard remains exactly as you left it.
+
+### 📥 CSV Export
+A dedicated export function allows users to download their filtered transaction history as a CSV file. This demonstrates handling practical data-export requirements in a frontend environment.
+
+### 🌓 Premium Theme System
+Implemented a full Light and Dark mode using **Tailwind CSS** and CSS variables (HSL). The theme is consistent across all charts, modals, and navigation elements.
+
+---
+
+## 🛠️ Tech Stack
+- **Framework**: React (Vite)
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Charts**: Recharts
+- **Icons**: Lucide React
+
+---
+**Built with ❤️ for the Zorvyn Assessment by S Venu**
