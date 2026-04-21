@@ -48,9 +48,9 @@ The codebase is structured into clear, modular components (`Sidebar`, `Overview`
 
 ---
 
-## 🔥 Features & Implementation
+##  Features & Implementation
 
-### 🛡️ Role-Based UI (RBAC)
+###  Role-Based UI (RBAC)
 I implemented a functional Role Switcher at the bottom of the sidebar. 
 -   **Admin**: Can add, edit, and delete transactions.
 -   **Viewer**: Read-only access with clear "Access Level" notifications.
