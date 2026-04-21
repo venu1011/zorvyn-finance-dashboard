@@ -13,7 +13,7 @@ To get the dashboard running on your local machine, follow these simple steps:
 - **npm** (comes with Node.js)
 
 ### Installation
-1.  **Clone the Repository**:
+1.  *Clone the Repository*:
     ```bash
     git clone https://github.com/venu1011/zorvyn-finance-dashboard.git
     cd zorvyn-finance-dashboard
